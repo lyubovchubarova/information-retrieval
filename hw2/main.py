@@ -15,7 +15,7 @@ def create_corpus(path = config['PARAMS']['path_to_files']):
     documents_names = []
 
     for root, dirs, files in os.walk(path):
-        for name in tqdm(files):
+        for name in files:
             with open(os.path.join(root, name), encoding='utf-8') as f:
                 text = f.read()
                 corpus.append(preprocess(text))
