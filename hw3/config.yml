@@ -1,0 +1,4 @@
+PARAMS:
+  path_to_files: 'C:\Users\lyuba\Downloads\data.jsonl'
+  number_of_documents: 50000
+  number_of_results: 10
