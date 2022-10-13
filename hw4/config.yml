@@ -1,0 +1,7 @@
+PARAMS:
+  path_to_files: 'C:\Users\lyuba\Downloads\data.jsonl'
+  number_of_documents: 50000
+  number_of_results: 10
+  corpus_indexed: 1
+  path_to_names: 'documents_names.txt'
+  path_to_matrix: 'embeddings.pt'
