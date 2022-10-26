@@ -1,0 +1,9 @@
+PARAMS:
+  path_to_files: 'C:\Users\lyuba\Downloads\data.jsonl'
+  number_of_documents: 50000
+  number_of_results: 100
+  path_to_matrix_tfidf: 'matrix_tfidf.npz'
+  path_to_matrix_bm25: 'matrix_bm25.npz'
+  path_to_matrix_bert: 'embeddings.pt'
+  path_to_vectorizer_tfidf: 'vectorizer_tfidf.pkl'
+  path_to_vectorizer_bm25: 'vectorizer_bm25.pkl'
