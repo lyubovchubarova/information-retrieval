@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/results.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/search.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/dropdown.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+<div class="list-wrapper">
+    <form class="search-form" method="POST">
+        <input name="search_text" id="search-input" type="text" value="{{ search_text }}" placeholder="Любовь найдется"/>
+        <button id="search-button" type="submit">Искать</button>
+        <div class="container">
+            <div class="main">
+                <select name="search_type">
+                    {% if search_type == "BM-25" %}
+                        <option selected value="BM-25">BM-25</option>
+                    {% else %}
+                        <option value="BM-25">BM-25</option>
+                    {% endif %}
+
+                    {% if search_type == "TfIdf" %}
+                        <option selected value="TfIdf">TfIdf</option>
+                    {% else %}
+                        <option value="TfIdf">TfIdf</option>
+                    {% endif %}
+
+                    {% if search_type == "BERT" %}
+                        <option selected value="BERT">BERT</option>
+                    {% else %}
+                        <option value="BERT">BERT</option>
+                    {% endif %}
+
+
+                </select>
+            </div>
+        </div>
+    </form>
+     <span class="search-result">Результатов: {{search_results_len}} ({{search_results_time}} сек.) </span>
+
+    {% for res in search_results %}
+        <div class="list-item" >
+            <p>
+                {{res}}
+            </p>
+        </div>
+   {%endfor%}
+
+    <div id="pagination-container"></div>
+</div>
+
+
+</body>
+    <script rel="text/javascript" src="{{ url_for('static',filename='scripts/jquery.expander.js') }}"></script>
+    <script rel="text/javascript" src="{{ url_for('static',filename='scripts/pagination.js') }}"></script>
+    <script rel="text/javascript" src="{{ url_for('static',filename='scripts/results.js') }}"></script>
+    <script rel="text/javascript" src="{{ url_for('static',filename='scripts/search.js') }}"></script>
+</html>

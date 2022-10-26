@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/results.css') }}">
+
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/404.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/search.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/dropdown.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+<div class="list-wrapper">
+    <h1>Вопрос без ответа...</h1>
+    <form class="search-form" method="POST">
+        <input name="search_text" id="search-input" type="text" placeholder="Любовь найдется"/>
+        <button id="search-button" type="submit">Искать</button>
+        <div class="container">
+            <div class="main">
+                <select name="search_type">
+                    <option value="BM-25">BM-25</option>
+                    <option value="TfIdf">TfIdf</option>
+                    <option value="BERT">BERT</option>
+                </select>
+            </div>
+        </div>
+    </form>
+    <div class="not-found-content">
+       <h3>По запросу {{search_text}} ничего не найдено({{search_results_time}} сек.)</h3>
+        <div class="not-found-bonus">
+        <h3>{{idiom}}</h3>
+        <span>{{idiom_author}}</span>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+
+<script type="text/javascript" src="{{ url_for('static',filename='scripts/search.js') }}"></script>
+
+</html>
