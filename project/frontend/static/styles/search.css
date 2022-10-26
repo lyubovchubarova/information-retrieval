@@ -1,0 +1,69 @@
+body{
+    /*background: black;*/
+}
+
+*{
+    font-family: 'Inter', sans-serif;
+}
+
+input,
+ button,
+ textarea,
+ select {
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.page-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+}
+
+.page-content .search-form{
+    max-width: 600px;
+}
+
+.search-form{
+    width: 100%;
+    border: 2px solid hotpink;
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 2.8rem;
+    color: #000;
+    border-radius: 0.8rem;
+    background: #fff;
+    transition: border-color .1s ease-in-out;
+    padding: 4px 0 4px 12px;
+    margin-bottom: 24px;
+}
+
+.search-form input{
+    width: 100%;
+}
+.search-form button{
+    height: 100%;
+    display: none;
+    margin: 0.2rem 0.2rem 0.2rem 0;
+    padding: 0 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: .9rem;
+    font-weight: 500;
+    cursor: pointer;
+    background: hotpink;
+    color: #ffffff;
+}
+.container{
+    margin-left: auto;
+}

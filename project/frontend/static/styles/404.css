@@ -1,0 +1,18 @@
+.not-found-bonus{
+   padding: 20px 16px 12px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px 0 #0d234308;
+    margin-bottom: 10px;
+}
+.not-found-content, .not-found-bonus {
+    display: flex;
+    flex-direction: column;
+}
+
+.not-found-bonus span{
+    margin-left: auto;
+}
+.not-found-content h3{
+    margin-top: 0;
+}
